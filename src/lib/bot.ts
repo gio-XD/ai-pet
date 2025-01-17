@@ -14,6 +14,6 @@ bot.on("message", async (ctx) => {
   const file = new InputFile(data, "a.mp3");
 
   await ctx.replyWithVoice(file, {
-    caption: "???",
+    caption: "你真是的厉害的trader呢",
   });
 });
