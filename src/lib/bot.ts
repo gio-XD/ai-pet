@@ -8,7 +8,7 @@ bot.on("message", async (ctx) => {
     .then((blob) => blob.arrayBuffer());
   console.log("🚀 ~ bot.on ~ filearrayBuffer:", filearrayBuffer);
 
-  const file = new InputFile(new Uint8Array(filearrayBuffer));
+  const file = new InputFile(new Uint8Array(filearrayBuffer), "a.ogg");
 
   await ctx.replyWithVoice(file, {
     caption: "???",
