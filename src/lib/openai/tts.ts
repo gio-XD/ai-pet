@@ -1,12 +1,12 @@
 import { openai } from "./index";
 
-const genText = async () => {
+export const genText = async () => {
   const aiout = await openai.chat.completions.create({
     model: "gpt-4o-mini",
     messages: [
       {
         role: "user",
-        content: `你是一个尖酸刻薄的批评家，我最近炒币亏了很多钱，你用中文狠狠骂我一顿,言简意赅`,
+        content: `你是一个尖酸刻薄的批评家，我最近炒币亏了很多钱,我的MBTI是ISFP，我的投资偏好比较保守,你用合适的语气批评我一顿一顿,言简意赅`,
       },
     ],
     stream: false,
