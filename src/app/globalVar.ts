@@ -1,4 +1,4 @@
-export type TempStorage = {
+export type TUser = {
   mbti: string;
   pet: string; // 精神动物
   phone: string; // +区号手机号;
@@ -9,7 +9,7 @@ export type TempStorage = {
 };
 
 // eslint-disable-next-line prefer-const
-export let tempStorage: TempStorage = {
+export let tempUserStorage: TUser = {
   mbti: "",
   phone: "",
   preferences: "low", //投资风险偏好;
@@ -19,8 +19,8 @@ export let tempStorage: TempStorage = {
   monitors: [],
 };
 
-export const setStorage = (newValue: TempStorage) => {
-  tempStorage = newValue;
+export const setStorage = (newValue: TUser) => {
+  tempUserStorage = newValue;
 };
 
-export const getStorage = () => tempStorage;
+export const getStorage = () => tempUserStorage;
