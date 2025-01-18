@@ -10,9 +10,14 @@ export const POST = async (req: NextRequest) => {
   setStorage(body);
 
   if (body.phone.includes("15105988232")) {
+    console.log("🚀 ~ POST ~ body:", body);
     //TODO: add url
 
-    twitliCall(body.personality === "gentle" ? undefined : undefined);
+    twitliCall(
+      body.personality === "gentle"
+        ? undefined
+        : "https://cdn-2.fakeyou.com/media/n/0/4/r/n/n04rnzjj7sebkcdy91vbctab2b03w3as/fakeyou_n04rnzjj7sebkcdy91vbctab2b03w3as.wav"
+    );
   }
 
   return NextResponse.json({
