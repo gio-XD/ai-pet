@@ -15,7 +15,7 @@ bot.on("message", async (ctx) => {
   const message = ctx.message.text;
 
   if (isAddress(message)) {
-    await ctx.reply("bind success");
+    await ctx.reply("linked successfully");
   } else {
     const data = await openAiTts();
 
